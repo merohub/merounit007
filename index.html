@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit Conversion</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet"  href="css/jquery.mobile-1.2.1.css" />  
+   
+<script src="js/jquery-1.7.1.min.js"></script>
+  <script src="js/jquery.mobile-1.2.0.js"></script>
+<style type="text/css"> body{background: #fff;}
+#error{color:red;}
+#foo{background: #fff;}
+#error2{color:red;}
+#error3{color:red;}
+#error4{color:red;}
+#error5{color:red;}
+
+.back-btn-down { margin: 2em 0.5em 0 0; }
+
+</style>
+
+    <script>
+function myFunction()
+{
+
+var v = document.form1.num1.value;
+
+var index = document.form1.select.selectedIndex;
+var value = document.form1.select.options[index].value;
+
+    if((value=="ctf") && (!!v))
+    {
+
+  
+
+  var cal = (v*9/5)+32;
+  document.getElementById("result").innerHTML=v +" &#176;C" +" = "+ cal.toFixed(2) +" &#176;F";
+  error.innerHTML = "";
+
+    }
+
+
+    else if((value=="ftc")  && (!!v))
+    {
+  var cal = (v-32)*5/9; 
+  document.getElementById("result").innerHTML=v +" &#176;F" +" = "+ cal.toFixed(2) + " &#176;C";
+  error.innerHTML = "";
+    }
+
+
+     else if((value=="ctk")  && (!!v))
+    {
+  var cal = parseFloat(v)+parseFloat(273.15); 
+  document.getElementById("result").innerHTML=v +" &#176;C" +" = "+ cal.toFixed(2) + " K";
+  error.innerHTML = "";
+    } 
+     else if((value=="ftk")  && (!!v))
+    {
+  var cal = (5/9 * (v - 32) + 273.15); 
+  document.getElementById("result").innerHTML=v +" &#176;F" +" = "+ cal.toFixed(2) + " K";
+  error.innerHTML = "";
+    }     
+
+    else
+    {
+       alert("Please make sure that you have entered a NUMBER and selected the desired CONVERSION method");
+     // document.getElementById("error").innerHTML="Please make sure you have entered a NUMBER and selected the desired CONVERSION method";
+      result.innerHTML = "";
+    }
+}
+
+</script>
+
+
+
+<!--LENGTH  -->
+    <script>
+function myFunction2()
+{
+
+
+var v2 = document.form2.num3.value;
+
+var index = document.form2.select3.selectedIndex;
+var value = document.form2.select3.options[index].value;
+
+    if((value=="mtc") && (!!v2))
+    {
+
+  
+
+  var cal = v2*100;
+  document.getElementById("result2").innerHTML=v2 +" m" +" = "+ cal.toFixed(2) +" cm";
+  error2.innerHTML = "";
+
+    }
+
+
+    else if((value=="ctm")  && (!!v2))
+    {
+  var cal = v2/100; 
+  document.getElementById("result2").innerHTML=v2 +" cm" +" = "+ cal.toFixed(2) + " m";
+  error2.innerHTML = "";
+    }
+
+
+     else if((value=="miltme")  && (!!v2))
+    {
+  var cal = v2/1000; 
+  document.getElementById("result2").innerHTML=v2 +" mm" +" = "+ cal.toFixed(3) + " m";
+  error2.innerHTML = "";
+    }
+                    
+    
+
+     else if((value=="metmil")  && (!!v2))
+    {
+  var cal = v2*1000; 
+  document.getElementById("result2").innerHTML=v2 +" mm" +" = "+ cal.toFixed(2) + " m";
+  error2.innerHTML = "";
+    }
+
+
+
+     else if((value=="ktm")  && (!!v2))
+    {
+  var cal = v2*1000; 
+  document.getElementById("result2").innerHTML=v2 +" km" +" = "+ cal.toFixed(2) + " m";
+  error2.innerHTML = "";
+    }
+
+
+
+     else if((value=="mtk")  && (!!v2))
+    {
+  var cal = v2/1000; 
+  document.getElementById("result2").innerHTML=v2 +" m" +" = "+ cal.toFixed(3) + " km";
+  error2.innerHTML = "";
+    }
+
+
+      else if((value=="kilotmile")  && (!!v2))
+    {
+  var cal = v2*0.621; 
+  document.getElementById("result2").innerHTML=v2 +" km" +" = "+ cal.toFixed(3) + " miles";
+  error2.innerHTML = "";
+    }
+
+
+    else if((value=="miletkilo")  && (!!v2))
+    {
+  var cal = v2*1.609; 
+  document.getElementById("result2").innerHTML=v2 +" miles" +" = "+ cal.toFixed(3) + " km";
+  error2.innerHTML = "";
+    }
+
+     else if((value=="itc")  && (!!v2))
+    {
+  var cal = v2*2.54; 
+  document.getElementById("result2").innerHTML=v2 +" in" +" = "+ cal.toFixed(3) + " cm";
+  error2.innerHTML = "";
+    }
+
+
+ else if((value=="cti")  && (!!v2))
+    {
+  var cal = v2*0.39; 
+  document.getElementById("result2").innerHTML=v2 +" cm" +" = "+ cal.toFixed(2) + " in";
+  error2.innerHTML = "";
+    }
+
+
+    else if((value=="fti")  && (!!v2))
+    {
+  var cal = v2*12; 
+  document.getElementById("result2").innerHTML=v2 +" ft" +" = "+ cal.toFixed(2) + " in";
+  error2.innerHTML = "";
+    }
+
+    else if((value=="itf")  && (!!v2))
+    {
+  var cal = v2/12; 
+  document.getElementById("result2").innerHTML=v2 +" in" +" = "+ cal.toFixed(2) + " ft";
+  error2.innerHTML = "";
+    }
+
+    else
+    {
+      alert("Please make sure that you have entered a NUMBER and selected the desired CONVERSION method");
+      //document.getElementById("error2").innerHTML="Please make sure you have entered a NUMBER and selected the desired CONVERSION method";
+      result2.innerHTML = "";
+    }
+}
+
+</script>
+
+<!--WEIGHT  -->
+<script>
+function myFunction3()
+{
+
+
+var v3 = document.form3.num4.value;
+
+var index = document.form3.select4.selectedIndex;
+var value = document.form3.select4.options[index].value;
+
+    if((value=="kgtgm") && (!!v3))
+    {
+
+    var cal = v3*1000;
+  document.getElementById("result3").innerHTML=v3 +" Kg" +" = "+ cal.toFixed(2) +" gm";
+  error3.innerHTML = "";
+
+    }
+
+
+   else if((value=="gmtkg") && (!!v3))
+    {
+
+    var cal = v3/1000;
+  document.getElementById("result3").innerHTML=v3 +" gm" +" = "+ cal.toFixed(2) +" kg";
+  error3.innerHTML = "";
+
+    }
+
+     else if((value=="gmtmg") && (!!v3))
+    {
+
+    var cal = v3*1000;
+  document.getElementById("result3").innerHTML=v3 +" gm" +" = "+ cal.toFixed(2) +" mg";
+  error3.innerHTML = "";
+
+    }
+
+     else if((value=="tontkg") && (!!v3))
+    {
+
+    var cal = v3*1000;
+  document.getElementById("result3").innerHTML=v3 +" tonne" +" = "+ cal.toFixed(2) +" kg";
+  error3.innerHTML = "";
+
+    }
+
+     else if((value=="kgtton") && (!!v3))
+    {
+
+    var cal = v3/1000;
+  document.getElementById("result3").innerHTML=v3 +" kg" +" = "+ cal.toFixed(3) +" tonne";
+  error3.innerHTML = "";
+
+    }
+
+    else if((value=="kgtlb") && (!!v3))
+    {
+
+    var cal = v3*2.2046;
+  document.getElementById("result3").innerHTML=v3 +" kg" +" = "+ cal.toFixed(4) +" lb(s)";
+  error3.innerHTML = "";
+
+    }
+
+    else if((value=="lbtkg") && (!!v3))
+    {
+
+    var cal = v3/2.2046;
+  document.getElementById("result3").innerHTML=v3 +" lb(s)" +" = "+ cal.toFixed(4) +" kg";
+  error3.innerHTML = "";
+
+    }
+
+     else if((value=="outkg") && (!!v3))
+    {
+
+    var cal = v3/35.274;
+  document.getElementById("result3").innerHTML=v3 +" oz" +" = "+ cal.toFixed(4) +" kg";
+  error3.innerHTML = "";
+
+    }
+
+     else if((value=="kgtou") && (!!v3))
+    {
+
+    var cal = v3*35.274;
+  document.getElementById("result3").innerHTML=v3 +" kg" +" = "+ cal.toFixed(4) +" oz";
+  error3.innerHTML = "";
+
+    }
+
+ else if((value=="stlb") && (!!v3))
+    {
+
+    var cal = v3*14;
+  document.getElementById("result3").innerHTML=v3 +" st" +" = "+ cal.toFixed(4) +" lb";
+  error3.innerHTML = "";
+
+    }
+
+else if((value=="lbts") && (!!v3))
+    {
+
+    var cal = v3/14;
+  document.getElementById("result3").innerHTML=v3 +" lb" +" = "+ cal.toFixed(4) +" st";
+  error3.innerHTML = "";
+
+    }
+
+    else
+    {
+      alert("Please make sure that you have entered a NUMBER and selected the desired CONVERSION method");
+     // document.getElementById("error3").innerHTML="Please make sure you have entered a NUMBER and selected the desired CONVERSION method";
+      result3.innerHTML = "";
+    }
+}
+
+</script>
+
+<!--  SPEED -->
+   <script>
+function myFunction4()
+{
+
+var v4 = document.form4.num5.value;
+
+var index = document.form4.select5.selectedIndex;
+var value = document.form4.select5.options[index].value;
+
+    if((value=="mptkp") && (!!v4))
+    {
+
+    var cal = v4*1.6093;
+  document.getElementById("result4").innerHTML=v4 +" mph" +" = "+ cal.toFixed(4) +" kph";
+  error4.innerHTML = "";
+
+    }
+
+    else if((value=="kptmp") && (!!v4))
+    {
+
+    var cal = v4/1.6093;
+  document.getElementById("result4").innerHTML=v4 +" kph" +" = "+ cal.toFixed(4) +" mph";
+  error4.innerHTML = "";
+
+    }
+
+    else if((value=="kntmi") && (!!v4))
+    {
+
+    var cal = v4*1.1508;
+  document.getElementById("result4").innerHTML=v4 +" knot(s)" +" = "+ cal.toFixed(4) +" mph";
+  error4.innerHTML = "";
+
+    }
+
+    else if((value=="mitkn") && (!!v4))
+    {
+
+    var cal = v4/1.1508;
+  document.getElementById("result4").innerHTML=v4 +" mph" +" = "+ cal.toFixed(4) +" knot(s)";
+  error4.innerHTML = "";
+
+    }
+
+    else
+    {
+      alert("Please make sure that you have entered a NUMBER and selected the desired CONVERSION method");
+     // document.getElementById("error4").innerHTML="Please make sure you have entered a NUMBER and selected the desired CONVERSION method";
+      result4.innerHTML = "";
+    }
+}
+
+</script>
+
+<!-- MEMORY -->
+
+   <script>
+function myFunction5()
+{
+
+var v5 = document.form5.num6.value;
+
+var index = document.form5.select6.selectedIndex;
+var value = document.form5.select6.options[index].value;
+
+    if((value=="bytbit") && (!!v5))
+    {
+
+    var cal = v5*8;
+  document.getElementById("result5").innerHTML=v5 +" byte(s)" +" = "+ cal.toFixed(2) +" bit(s)";
+  error5.innerHTML = "";
+
+    }
+
+    else if((value=="bittbyt") && (!!v5))  
+    {
+
+    var cal = v5/8;
+  document.getElementById("result5").innerHTML=v5 +" bit(s)" +" = "+ cal.toFixed(4) +" byte(s)";
+  error5.innerHTML = "";
+
+    }
+
+     else if((value=="kbtbyt") && (!!v5))  
+    {
+
+    var cal = v5*1024;
+  document.getElementById("result5").innerHTML=v5 +" kb(s)" +" = "+ cal.toFixed(2) +" byte(s)";
+  error5.innerHTML = "";
+
+    }
+
+     else if((value=="gigabittmbyte") && (!!v5))  
+    {
+
+    var cal = v5*128;
+  document.getElementById("result5").innerHTML=v5 +" gigabit(s)" +" = "+ cal.toFixed(2) +" megabyte(s)";
+  error5.innerHTML = "";
+
+    }
+
+    else if((value=="gigabittmbit") && (!!v5))  
+    {
+
+    var cal = v5*1024;
+  document.getElementById("result5").innerHTML=v5 +" gigabit(s)" +" = "+ cal.toFixed(2) +" megabit(s)";
+  error5.innerHTML = "";
+
+    }
+
+    else if((value=="gigabytetmbyte") && (!!v5))  
+    {
+
+    var cal = v5*1024;
+  document.getElementById("result5").innerHTML=v5 +" gigabyte(s)" +" = "+ cal.toFixed(2) +" megabyte(s)";
+  error5.innerHTML = "";
+
+    }
+
+    else if((value=="gigabytetmbit") && (!!v5))  
+    {
+
+    var cal = v5*8192;
+  document.getElementById("result5").innerHTML=v5 +" gigabyte(s)" +" = "+ cal.toFixed(2) +" megabit(s)";
+  error5.innerHTML = "";
+
+    }
+
+   
+ else if((value=="mbytkbyte") && (!!v5))  
+    {
+
+    var cal = v5*1024;
+  document.getElementById("result5").innerHTML=v5 +" megabyte(s)" +" = "+ cal.toFixed(2) +" kilobyte(s)";
+  error5.innerHTML = "";
+
+    }
+ else if((value=="mbytkilo") && (!!v5))  
+    {
+
+    var cal = v5*8192;
+  document.getElementById("result5").innerHTML=v5 +" megabyte(s)" +" = "+ cal.toFixed(2) +" kilobit(s)";
+  error5.innerHTML = "";
+
+    }
+
+else if((value=="mbytbyte") && (!!v5))  
+    {
+
+    var cal = v5*1048576;
+  document.getElementById("result5").innerHTML=v5 +" megabyte(s)" +" = "+ cal.toFixed(2) +" byte(s)";
+  error5.innerHTML = "";
+
+    }
+
+    else
+    {
+       alert("Please make sure that you have entered a NUMBER and selected the desired CONVERSION method");
+     // document.getElementById("error5").innerHTML="Please make sure you have entered a NUMBER and selected the desired CONVERSION method";
+      result5.innerHTML = "";
+    }
+}
+
+</script>
+
+
+
+</head>
+<body>
+
+<!-- Start of first page -->
+<div data-role="page" id="foo">
+
+	<div data-role="header" data-theme="b" >
+		<h1><img src="images/titleimg.png" /></h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<ul data-role="listview">
+    <li><img src="images/temperature2.png" />
+        <ul><a href="#demo-intro" data-rel="back" class="back-btn" data-role="button" data-mini="true" data-inline="true" data-icon="back" data-iconpos="right">Back</a>
+<div align="center">Temperature</span>
+            <li><div data-role="content">
+		<div id="error">
+  </div>
+
+
+<form name="form1"><em>Normal body temperature: 37&#176;C</em> 
+ <ul data-role="listview" data-inset="true">
+        <li data-role="fieldcontain">
+            <label for="name2">Enter a number:</label>
+
+
+  <input type="tel" name ="num1" id="num1" data-clear-btn="true" required placeholder="number" onfocus="this.value = ''"/>
+
+ </li>
+       
+        <li data-role="fieldcontain">
+            <label for="select-choice-1" class="select">Select Conversion:</label>
+            <select name="select" id="select">
+                 <option value="">--------------</option>
+                <option value="ctf">Celsius to Fahrenheit</option>
+                <option value="ftc">Fahrenheit to Celsius</option>
+                <option value="ctk">Celsius to Kelvin</option>
+                <option value="ftk">Fahrenheit to Kelvin</option>
+
+            </select>
+        </li>
+             
+        <li class="ui-body ui-body-b">
+            <fieldset class="ui-grid-a">
+
+
+                    <div class="ui-block-b"></div>
+            </fieldset>
+        </li>
+    </ul>
+
+</form>          
+
+  
+
+
+
+<input type="submit" onclick="myFunction()" value="Show Result" />
+<h3>Result:<br/>
+  <div id="result">
+
+  </div>
+
+<a href="#demo-intro" data-rel="back" class="back-btn-down" data-role="button" data-mini="true" data-inline="true" data-icon="back" data-iconpos="right">Back</a>
+
+	</div><!-- /content -->
+
+
+            </li>
+            
+           
+        </ul>
+    </li>
+    
+
+
+   <li><img src="images/length.png" />
+        <ul><a href="#demo-intro" data-rel="back" class="back-btn" data-role="button" data-mini="true" data-inline="true" data-icon="back" data-iconpos="right">Back</a>
+<div align="center">Length</span>
+            <li><div data-role="content">
+        <div id="error2">
+  </div>
+<form name="form2">
+ <ul data-role="listview" data-inset="true">
+        <li data-role="fieldcontain">
+            <label for="name3">Enter a number:</label>
+
+
+  <input type="tel" name ="num3" id="num3" data-clear-btn="true" required placeholder="number" onfocus="this.value = ''"/>
+
+ </li>
+       
+        <li data-role="fieldcontain">
+            <label for="select-choice-1" class="select">Select Conversion:</label>
+            <select name="select3" id="select3">
+                 <option value="">--------------</option>
+                <option value="mtc">Meter to Centimeter</option>
+                <option value="ctm">Centimeter to Meter</option>
+
+                 <option value="miltme">Millimeter to Meter</option>
+                 <option value="metmil"> Meter to Millimeter</option>
+
+                  <option value="ktm">Kilometer to Meter</option>
+                   <option value="mtk">Meter to Kilometer</option>
+
+                   <option value="kilotmile">Kilometer to Mile</option>
+               <option value="miletkilo">Mile to Kilometer</option>
+
+               <option value="itc">Inch to Centimeter</option>
+               <option value="cti">Centimeter to Inch</option>
+
+               <option value="fti">Feet/Foot to Inch</option>
+               <option value="itf">Inch to Feet/Foot</option>
+
+            </select>
+        </li>
+             
+        <li class="ui-body ui-body-b">
+            <fieldset class="ui-grid-a">
+
+
+                    <div class="ui-block-b"></div>
+            </fieldset>
+        </li>
+    </ul>
+
+</form>          
+
+  
+
+
+
+<input type="submit" onclick="myFunction2()" value="Show Result" />
+<h3>Result:<br/>
+  <div id="result2">
+
+  </div>
+
+<a href="#demo-intro" data-rel="back" class="back-btn-down" data-role="button" data-mini="true" data-inline="true" data-icon="back" data-iconpos="right">Back</a>
+
+    </div><!-- /content -->
+
+
+
+            </li>
+            
+           
+        </ul>
+    </li>
+
+
+ <li><img src="images/weight.png" />
+        <ul><a href="#demo-intro" data-rel="back" class="back-btn" data-role="button" data-mini="true" data-inline="true" data-icon="back" data-iconpos="right">Back</a>
+<div align="center">Weight</span>
+            <li><div data-role="content">
+        <div id="error3">
+  </div>
+<form name="form3">
+ <ul data-role="listview" data-inset="true">
+        <li data-ro3le="fieldcontain">
+            <label for="name4">Enter a number:</label>
+
+
+  <input type="tel" name ="num4" id="num4" data-clear-btn="true" required placeholder="number" onfocus="this.value = ''"/>
+
+ </li>
+       
+        <li data-role="fieldcontain">
+            <label for="select-choice-1" class="select">Select Conversion:</label>
+            <select name="select4" id="select4">
+                 <option value="">--------------</option>
+                
+                <option value="kgtgm">Kilogram to Gram</option>
+                <option value="gmtkg">Gram to Kilogram</option>
+
+                 <option value="gmtmg">Gram to Milligram</option>
+
+                 <option value="tontkg">Tonne to Kilogram</option>
+                  <option value="kgtton">Kilogram to Tonne</option>
+
+                   <option value="kgtlb">Kilogram to Pound(lb)</option>
+                    <option value="lbtkg">Pound(lb) to Kilogram</option>
+
+                    <option value="outkg">Ounce to Kilogram</option>
+                    <option value="kgtou">Kilogram to Ounce</option>
+
+                    <option value="stlb">Stone to Pound</option>
+                    <option value="lbts">Pound to Stone</option>
+               
+
+
+            </select>
+        </li>
+             
+        <li class="ui-body ui-body-b">
+            <fieldset class="ui-grid-a">
+
+
+                    <div class="ui-block-b"></div>
+            </fieldset>
+        </li>
+    </ul>
+
+</form>          
+
+  
+
+
+
+<input type="submit" onclick="myFunction3()" value="Show Result" />
+<h3>Result:<br/>
+  <div id="result3">
+
+  </div>
+
+<a href="#demo-intro" data-rel="back" class="back-btn-down" data-role="button" data-mini="true" data-inline="true" data-icon="back" data-iconpos="right">Back</a>
+
+    </div><!-- /content -->
+
+
+
+
+            </li>
+            
+           
+        </ul>
+    </li>
+
+
+ <li><img src="images/speed.png" />
+        <ul><a href="#demo-intro" data-rel="back" class="back-btn" data-role="button" data-mini="true" data-inline="true" data-icon="back" data-iconpos="right">Back</a>
+<div align="center">Speed</span>
+            <li><div data-role="content">
+        <div id="error4">
+  </div>
+<form name="form4">
+ <ul data-role="listview" data-inset="true">
+        <li data-role="fieldcontain">
+            <label for="name5">Enter a number:</label>
+
+
+  <input type="tel" name ="num5" id="num5" data-clear-btn="true" required placeholder="number" onfocus="this.value = ''"/>
+
+ </li>
+       
+        <li data-role="fieldcontain">
+            <label for="select-choice-1" class="select">Select Conversion:</label>
+            <select name="select5" id="select5">
+                 <option value="">--------------</option>
+                
+                <option value="mptkp">Miles/hr to Kilometers/hr</option>
+                <option value="kptmp">Kilometers/hr to Miles/hr</option>
+
+                 <option value="kntmi">Knots/hr to Miles/hr</option>
+                <option value="mitkn">Miles/hr to Knots/hr</option>
+
+    
+                  </select>
+        </li>
+             
+        <li class="ui-body ui-body-b">
+            <fieldset class="ui-grid-a">
+
+
+                    <div class="ui-block-b"></div>
+            </fieldset>
+        </li>
+    </ul>
+
+</form>          
+
+  
+<input type="submit" onclick="myFunction4()" value="Show Result" />
+<h3>Result:<br/>
+  <div id="result4">
+
+  </div>
+
+<a href="#demo-intro" data-rel="back" class="back-btn-down" data-role="button" data-mini="true" data-inline="true" data-icon="back" data-iconpos="right">Back</a>
+
+    </div><!-- /content -->
+
+
+
+<!--MEMORY-->
+ </li>
+            
+           
+        </ul>
+    </li>
+
+
+ <li><img src="images/memory.png" />
+        <ul><a href="#demo-intro" data-rel="back" class="back-btn" data-role="button" data-mini="true" data-inline="true" data-icon="back" data-iconpos="right">Back</a>
+<div align="center">Memory</span>
+            <li><div data-role="content">
+        <div id="error5">
+  </div>
+<form name="form5">
+ <ul data-role="listview" data-inset="true">
+        <li data-role="fieldcontain">
+            <label for="name6">Enter a number:</label>
+
+
+  <input type="tel" name ="num6" id="num6" data-clear-btn="true" required placeholder="number" onfocus="this.value = ''"/>
+
+ </li>
+       
+        <li data-role="fieldcontain">
+            <label for="select-choice-1" class="select">Select Conversion:</label>
+            <select name="select5" id="select6">
+                 <option value="">--------------</option>
+                
+                <option value="bytbit">Byte to Bit</option>
+               <option value="bittbyt">Bit to Byte</option>
+
+               <option value="kbtbyt">Kilobyte to Byte</option>
+
+               <option value="gigabittmbyte">Gigabit to Megabyte</option>
+               <option value="gigabittmbit">Gigabit to Megabit</option>
+
+                <option value="gigabytetmbyte">Gigabyte to Megabyte</option>
+               <option value="gigabytetmbit">Gigabyte to Megabit</option>
+
+                <option value="mbytkbyte">Megabyte to Kilobyte</option>   
+               <option value="mbytkilo">Megabyte to Kilobit</option> 
+                <option value="mbytbyte">Megabyte to Byte</option> 
+
+    
+                  </select>
+        </li>
+             
+        <li class="ui-body ui-body-b">
+            <fieldset class="ui-grid-a">
+
+
+                    <div class="ui-block-b"></div>
+            </fieldset>
+        </li>
+    </ul>
+
+</form>          
+
+  
+<input type="submit" onclick="myFunction5()" value="Show Result" />
+<h3>Result:<br/>
+  <div id="result5">
+
+  </div>
+
+<a href="#demo-intro" data-rel="back" class="back-btn-down" data-role="button" data-mini="true" data-inline="true" data-icon="back" data-iconpos="right">Back</a>
+
+    </div><!-- /content -->
+
+
+</ul>
+	</div><!-- /content -->
+
+	<!--<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div> -->
+</div><!-- /page -->
+
+</body>
